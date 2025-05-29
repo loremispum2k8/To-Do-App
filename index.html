@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do list</title>
 <script defer src="main.js"></script></head>
 <body>
         
@@ -44,45 +44,14 @@
             </div>
 
             <div class="lowerLeftContainer">
-                <div class="projectsTitleContainer">
-                    <h1 class="bigProjectsTitle">Projects</h1>
-                    <img class="projectDropDownArrow" src="c51871bc6ef3021a81e3.png" alt="icon">
+                <div class="outer-div">
+                    <div class="projectsTitleContainer">
+                        <h1 class="bigProjectsTitle">Projects</h1>
+                        <img class="projectDropDownArrow down" src="c51871bc6ef3021a81e3.png" alt="icon">
+                    </div>
                 </div>
 
                 <div class="projectsList">
-                    <div class="projectContainer">
-                        <div class="projectTopRow">
-                            <h2 class="projectTitle">Default</h2>
-                            <img class="projectPlus" src="813cb6db9b2db844564f.png" alt="plus">
-                        </div>
-                        <div class="projectAllLists">
-                            <div class="listInline">
-                                <h2 class="listTitle">Vacation in Rome</h2>
-                                <h2 class="listNumber">0</h2>
-                            </div>
-                            <div class="listInline">
-                                <h2 class="listTitle">Buy a new car</h2>
-                                <h2 class="listNumber">0</h2>
-                            </div>
-                            <div class="listInline">
-                                <h2 class="listTitle">Throw Party for John</h2>
-                                <h2 class="listNumber">0</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line"><p>text</p></div>
-                    <div class="projectContainer lastProjectContainer">
-                        <div class="projectTopRow">
-                            <h2 class="projectTitle">Work</h2>
-                            <img class="projectPlus" src="813cb6db9b2db844564f.png" alt="add icon">
-                        </div>
-                        <div class="projectAllLists">
-                            <div class="listInline">
-                                <h2 class="listTitle">Prepare Presentation</h2>
-                                <h2 class="listNumber">0</h2>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="newProjectButton">
@@ -96,16 +65,33 @@
     
     <div class="NewProjectPopUp">
         <div class="NewProjectContainer">
-            <form class="NewProjectForm">
+            <form name="projectName" class="NewProjectForm">
                 <div class="newProjectTopRow">
                     <label for="project">Project Name</label>
-                    <img class="closeIcon" src="29f5b654a1cccef7b845.png" alt="close icon">
+                    <img class="projectCloseIcon" src="29f5b654a1cccef7b845.png" alt="close icon">
                 </div>
-                <input id="project" type="text" placeholder="Max lenght: 25 characters" maxlength="25" required autocomplete="off">
+                <input id="project" pattern="^(?!project$)(?!Project$)[a-zA-Z ]{1,25}$" name="project" type="text" placeholder="Max length: 25 characters" autocomplete="off" maxlength="25" required>
                 <button class="projectBtn" type="submit">Done</button>
             </form>
         </div>
         <div class="NewProjectBlurredBg"></div>
+    </div>
+
+    <div class="NewListPopUp hidden">
+        <div class="NewListContainer">
+            <form name="ListName" class="NewListForm">
+                <div class="newListTopRow">
+                    <p class="listProject">Project: <span class="projectInput"></span></p>
+                    <img class="listCloseIcon" src="29f5b654a1cccef7b845.png" alt="close icon">
+                </div>
+                <label for="listName">List Name</label>
+                <input id="listName" name="listName" type="text" placeholder="Max length: 20 characters" autocomplete="off" maxlength="20" required>
+                <label for="listDescription">List Description</label>
+                <textarea id="listDescription" name="listDescription" type="text" placeholder="Max length: 100 characters" autocomplete="off" maxlength="100" required></textarea>
+                <button class="listBtn" type="submit">Done</button>
+            </form>
+        </div>
+        <div class="NewListBlurregBg"></div>
     </div>
 </body>
 </html>
