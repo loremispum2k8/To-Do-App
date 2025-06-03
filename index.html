@@ -223,28 +223,31 @@
                         </div>
                     </div>
                     <div class="popListList">
-                    <!--<div class="inlineToDoContainer" data-id="">
-                    <div class="inlineToDoContainerInfo">
-                        <input class="taskCheck" type="checkbox">
-                        <p class="taskName">Review data with Olivia</p>
-                        <div class="taskLabels">
-                            <div class="taskTimeContainer">
-                                <p class="taskDate">15</p>
-                                <p class="taskDay">march</p>
-                                <p class="taskTime">14:30</p>
+                        
+                        
+                        <!--<div class="inlineToDoContainer">
+                            <div class="inlineToDoContainerInfo">
+                                <input class="taskCheck" type="checkbox">
+                                <p class="taskName">Schedule talk with Jessie</p>
+                                <div class="taskLabels">
+                                    <p class="taskTimeContainer">15 march : 08:30</p>
+                                    <p class="highPriorityContainer">High Priority</p>
+                                </div>
+                                <div class="taskSource">
+                                    <p class="sourceProject">Work</p>
+                                    <img class="taskarrow" src="NewProject/arrow.png" alt="arrow">
+                                    <p class="popListInfo">Prepare Presentation</p>
+                                </div>
                             </div>
-                            <div class="highPriorityContainer">
-                                <p class="highPriorityText">High Priority</p>
-                            </div>
+                            <img class="taskCloseIcon" src="NewProject/close.png" alt="delete icon">
                         </div>
-                        <div class="taskSource">
-                            <p class="taskProject">Work</p>
-                            <img class="taskArrow" src="NewProject/arrow.png" alt="arrow icon">
-                            <p class="taskList">Prepare Presentation</p>
-                        </div>
-                    </div>
-                    <img class="taskCloseIcon" src="NewList/close.png" alt="close icon">
-                    </div>-->
+
+                        <div class="taskLine"></div>-->
+
+
+
+
+
                     </div>
                 </div>
                 <div class="addListButtons">
@@ -261,8 +264,22 @@
                     <label for="project">Project Name</label>
                     <img class="projectCloseIcon" src="29f5b654a1cccef7b845.png" alt="close icon">
                 </div>
-                <input id="project" pattern="^(?!project$)(?!Project$)[a-zA-Z ]{1,25}$" name="project" type="text" placeholder="Max length: 25 characters" autocomplete="off" maxlength="25" required>
+                <input id="project" name="project" type="text" placeholder="Max length: 25 characters" autocomplete="off" maxlength="25" required>
                 <button class="projectBtn" type="submit">Done</button>
+            </form>
+        </div>
+        <div class="NewProjectBlurredBg"></div>
+    </div>
+
+        <div class="NewProjectPopUp EditProjectPopUp">
+        <div class="NewProjectContainer">
+            <form name="projectName" class="NewProjectForm editProjectForm">
+                <div class="newProjectTopRow">
+                    <label for="project">Project Name</label>
+                    <img class="projectCloseIcon closeEditProject" src="29f5b654a1cccef7b845.png" alt="close icon">
+                </div>
+                <input class="editProjectName" id="project" pattern="^(?!project$)(?!Project$)[a-zA-Z ]{1,25}$" name="project" type="text" placeholder="Max length: 25 characters" autocomplete="off" maxlength="25" required>
+                <button class="projectBtn approveProjectName" type="submit">Done</button>
             </form>
         </div>
         <div class="NewProjectBlurredBg"></div>
@@ -283,6 +300,39 @@
             </form>
         </div>
         <div class="NewListBlurregBg"></div>
+    </div>
+
+    <div class="newTasksPopUp">
+        <div class="newTasksContainer">
+            <form name="taskName" class="newTasksForm">
+                <div class="newTasksTopRow">
+                    <label for="task">Task Name</label>
+                    <img class="taskPopUpCloseIcon" src="29f5b654a1cccef7b845.png" alt="close icon">
+                </div>
+                <input id="task" name="task" type="text" placeholder="Max length: 60 characters" autocomplete="off" maxlength="60" required>
+                <button class="taskBtn" type="submit">Done</button>
+
+                <div class="timeAndDateContainer">
+                    <div class="timeUpperRow">
+                        <input id="time" type="checkbox">
+                        <label class="textAndArrow" for="time">
+                            <p>Time and Date <span class="optional">(optional)</span></p>
+                            <img class="taskarrow up" src="88f8e5623ada7a72d1b1.png" alt="arrow up">
+                        </label>
+                    </div>
+                    <div class="timeLabelsContainer hideTask">
+                        <input id="timeInput" type="time">
+                        <input id="dateInput" type="date">
+                    </div>
+                </div>
+                <div class="priorityUpperRow">
+                    <input id="priority" type="checkbox">
+                    <label for="priority">High Priority <span class="optional">(optional)</span></label>
+                </div>
+
+            </form>
+        </div>
+        <div class="newTasksBlurredBg"></div>
     </div>
 </body>
 </html>
