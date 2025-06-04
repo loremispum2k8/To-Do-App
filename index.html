@@ -275,11 +275,12 @@
         <div class="NewProjectContainer">
             <form name="projectName" class="NewProjectForm editProjectForm">
                 <div class="newProjectTopRow">
-                    <label for="project">Project Name</label>
+                    <label for="projectEdit">Project Name</label>
                     <img class="projectCloseIcon closeEditProject" src="29f5b654a1cccef7b845.png" alt="close icon">
                 </div>
-                <input class="editProjectName" id="project" pattern="^(?!project$)(?!Project$)[a-zA-Z ]{1,25}$" name="project" type="text" placeholder="Max length: 25 characters" autocomplete="off" maxlength="25" required>
+                <input class="editProjectName" id="projectEdit" pattern="^(?!project$)(?!Project$)[a-zA-Z ]{1,25}$" name="project" type="text" placeholder="Max length: 25 characters" autocomplete="off" maxlength="25" required>
                 <button class="projectBtn approveProjectName" type="submit">Done</button>
+                <button class="deleteProject">Delete</button>
             </form>
         </div>
         <div class="NewProjectBlurredBg"></div>
@@ -327,6 +328,40 @@
                 </div>
                 <div class="priorityUpperRow">
                     <input id="priority" type="checkbox">
+                    <label for="priority">High Priority <span class="optional">(optional)</span></label>
+                </div>
+
+            </form>
+        </div>
+        <div class="newTasksBlurredBg"></div>
+    </div>
+
+    <!--HERE-->
+    <div class="newTasksPopUp editTaskPopUp">
+        <div class="newTasksContainer">
+            <form name="taskName" class="newTasksForm editTaskForm">
+                <div class="newTasksTopRow">
+                    <label for="editTask">Task Name</label>
+                    <img class="taskPopUpCloseIcon editTaskPopUpCloseIcon" src="29f5b654a1cccef7b845.png" alt="close icon">
+                </div>
+                <input class="taskInputEdit" id="task" name="task" type="text" placeholder="Max length: 60 characters" autocomplete="off" maxlength="60" required>
+                <button class="taskBtn" type="submit">Done</button>
+
+                <div class="timeAndDateContainer">
+                    <div class="timeUpperRow">
+                        <input class="taskEdit" id="time" type="checkbox">
+                        <label class="textAndArrow" for="time">
+                            <p>Time and Date <span class="optional">(optional)</span></p>
+                            <img class="taskarrow up" src="88f8e5623ada7a72d1b1.png" alt="arrow up">
+                        </label>
+                    </div>
+                    <div class="timeLabelsContainer hideTask">
+                        <input id="timeInput" class="timeEdit" type="time">
+                        <input id="dateInput" class="dateEdit" type="date">
+                    </div>
+                </div>
+                <div class="priorityUpperRow">
+                    <input class="taskPriorityEdit" id="priority" type="checkbox">
                     <label for="priority">High Priority <span class="optional">(optional)</span></label>
                 </div>
 
